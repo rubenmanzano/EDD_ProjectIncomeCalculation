@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using EDD_ProjectIncomeCalculation.Domain.Employees;
 using EDD_ProjectIncomeCalculation.Domain.Projects;
 
@@ -10,14 +9,14 @@ namespace EDD_ProjectIncomeCalculation.Application
         public static void Main(string[] args)
         {
             var builder = new EmployeeBuilder();
+            
+            var foo = builder.WithName("foo").WithAddress("N/A").WithSalary(40000).Build();
+            foo.AssignCategory<Professional>();
 
-            var foo = builder.WithName("foo").WithAddress("N/A").WithSalary(30000).Build();
-            foo.AssignCategory<Junior>();
+            var bar = builder.WithName("bar").WithAddress("N/A").WithSalary(21000).Build();
+            bar.AssignCategory<Junior>();
 
-            var bar = builder.WithName("bar").WithAddress("N/A").WithSalary(45000).Build();
-            bar.AssignCategory<Professional>();
-
-            var baz = builder.WithName("baz").WithAddress("N/A").WithSalary(45000).Build();
+            var baz = builder.WithName("baz").WithAddress("N/A").WithSalary(50000).Build();
             baz.AssignCategory<Principal>();
 
 
