@@ -5,7 +5,5 @@
         public override string Name => "Professional";
 
         public override double HourlyRate => 35.0;
-
-        public override EmployeeRank Rank => EmployeeRank.Professional;
     }
 }
