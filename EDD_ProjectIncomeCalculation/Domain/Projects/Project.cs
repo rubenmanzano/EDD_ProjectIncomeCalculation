@@ -24,7 +24,7 @@ namespace EDD_ProjectIncomeCalculation.Domain.Projects
         {
             this.Employees.Add(employee);
             this.Income += employee.Category.HourlyRate * hours;
-            this.Expenses += employee.Salary / (employee.Category.HoursPerYear / hours);
+            this.Expenses += (employee.Salary / employee.Category.HoursPerYear) * hours);
         }
     }
 }
