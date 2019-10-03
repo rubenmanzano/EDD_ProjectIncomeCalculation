@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.lock
+/.vs/EDD_ProjectIncomeCalculation/v15
+/EDD_ProjectIncomeCalculation/obj
+/EDD_ProjectIncomeCalculation.sln.DotSettings.user
